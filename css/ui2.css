@@ -1,0 +1,323 @@
+@charset "utf-8";
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, code, del, 
+dfn, em, img, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, 
+td, hr{margin:0;padding:0;font-size:100%;box-sizing: border-box;}
+body{height:100%;min-height:100%;font-family:'Noto Sans Korean','Malgun Gothic','맑은고딕','돋움',dotum, sans-serif;font-size:16px;color:#737373;line-height:1.5;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal}
+ol, ul, li {list-style:none}
+table {width:100%; border-collapse:collapse;border-spacing:0}
+form, fieldset, iframe {display:block;border:0}
+img, button {border:0 none;vertical-align:top;}
+hr {height:0; display:none}
+i, em, address{font-style:normal}
+label, button{cursor:pointer}
+blockquote, q {quotes:none}
+caption, legend {overflow:hidden;visibility:hidden;position:absolute;width:0;height:0;padding:0;margin:0;font-size:0;text-indent:-100%;white-space:nowrap;z-index:-1}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {display:block;box-sizing: border-box;}
+input, textarea, select, button {outline:none; font-family:'Noto Sans Korean','Malgun Gothic','맑은고딕','돋움',dotum, sans-serif;font-size:16px;color:#919090;line-height:1.5;letter-spacing:0;vertical-align:middle; border:none;}
+input, textarea {margin:0;padding:0;  background:none; box-sizing:border-box;}
+textarea {resize:none}
+a {color:#919090;text-decoration:none}
+a:link, a:visited {text-decoration:none}
+a:hover {text-decoration:none}
+.blind{display: none;overflow: hidden;position: absolute;width: 0;height: 0;padding: 0;margin: 0; font-size: 0;line-height: 0; text-indent: -9999em;visibility: hidden;outline: none;z-index: -1;}
+html,body{overflow:hidden;height:100%;}
+/*레이아웃*/
+#wrap {width:100%; height:100%;}
+#wrap > h1{font-size:0;}
+#wrap header{width:100%; height:100px;
+			margin-top:0;
+			background:white;   
+			position:relative; z-index:900;}
+#wrap header a{height:100px; width:auto; 
+				position:absolute; 
+				transition: .6s;}
+#wrap header a .titles{width:auto; height:100px;}
+
+#wrap header:hover a{left:45%; padding-top:20px; transition: .6s;}
+#tit{width:20%; height:80px; position:relative;}
+#tit a{width:100%; height:100%;position:absolute; left:0; display:block; z-index:800;}
+#tit .titicon{width:300px; height:100%; position:absolute; transition:.8s;}
+#tit .titicon:nth-child(1){background:url(../images/title1.jpg)no-repeat center; left:-10px;}
+#tit .titicon:nth-child(2){background:url(../images/title2.jpg)no-repeat center; left:4px; top:0;}
+#tit .titicon:nth-child(3){background:url(../images/title3.jpg)no-repeat center; left:-18px; top:10px;}
+#tit .titicon:nth-child(4){background:url(../images/title4.jpg)no-repeat center; left:34px;top:-4px;}
+#tit .titicon:nth-child(5){background:url(../images/title5.jpg)no-repeat center; left:12px;top:14px;}
+#tit .titicon:nth-child(6){background:url(../images/title6.jpg)no-repeat center; left:58px;top:-2px;}
+#tit .titicon:nth-child(7){background:url(../images/title7.jpg)no-repeat center; left:108px;top:-12px;}
+#tit .titicon:nth-child(n){ background-size:80%;}
+#tit:hover .titicon{left:0;top:0; transform:rotate(0deg); cursor:pointer;}
+
+		/*본문*/
+.section_css{display:none;top:0; width:100%; position:absolute;  height:100%; padding-top:150px; overflow:scroll; transition:1.2s;}
+#text{padding-top:150px;}
+
+#menu1_section>a{position:absolute; top:0;}
+#container{width:100%; overflow:scroll; height:100%; position:relative; margin:0 auto;}
+#container a{color:#737373;}
+#container .content{width:33.3%; margin-left:;height:100%; position:absolute;}
+#container .content h2{font-size:0;}
+.pink{background:pink;}
+#conhomepage{left:0%;}
+#conmy_introduction{left:33.3%;}
+#congold{left:66.6%;}
+#container .content .menutit{width:70%; height:200px; position:relative; margin:30% 15% 0 15%; overflow:hidden;  text-align:center; transition:.6s;}
+#container .content .menutit > *{transition:.6s;}
+#container .content .menutit p{width:100%; height:200px; z-index:11; position:absolute; line-height:200px;font-size:25px;}
+#container .content .menutit ul{width:100%; border-radius:0 0 30px 30px; height:0; top:-100px;  opacity:0; margin-top:80px; overflow:hidden; position:absolute;}
+#container .content .menutit ul li{width:100%; height:50px; line-height:50px; }
+#container .content .menutit ul li:hover{cursor:pointer;}
+#container .content .menutit ul li:last-child{border-radius:0 0 30px 30px;}
+#container .content .menutit.on{width:76%; height:70%;margin:30% 12% 0 12%; line-height:80px;}
+#container .content .menutit.on p{height:80px;  line-height:80px; border-bottom:3px solid; border-radius: 30px 30px 0 0;}
+#container .content .menutit.on ul{width:100%; top:0; height:auto; opacity:1;}
+/*메뉴 선택 후 동작*/
+#container.nav{width:100%;overflow:visible; background:white; height:50px; z-index:500;  position:relative; margin:0 auto;}
+#container.nav .content .menutit{height:100%;width:44%; margin:0 23%; overflow:visible;}
+#container.nav .content .menutit p{font-size:15px;top:0;line-height:50px;border:0; height:50px; margin-top:0;}
+#container.nav .content .menutit ul{margin-top:50px;top:0; overflow:hidden;  background:rgba(255,255,255,0.5);}
+#container.nav .content .menutit ul li{height:27px;padding:5px 0 5px 0; line-height:20px;color:black;}
+#container.nav .content .menutit.on{line-height:50px;margin:0 11%;  width:70%;}
+#container.nav .content .menutit.on p{height:50px;border-radius:0;  line-height:50px;}
+#container.nav .content .menutit.on ul{border-radius:0;}
+#container.nav .content .menutit.on ul li{border-radius:0;}
+#homepage > p{background:#FAF4C0;}
+#homepage:hover > p{background:#FFA7A7;}
+#homepage ul li:hover{background:#FFD8D8;}
+#my_introduction > p{background:#E8E2AE;}
+#my_introduction:hover > p{background:#CEF279;}
+#my_introduction ul li:hover{background:#E4F7BA;}
+#gold > p{background:#D6D09C;}
+#gold:hover > p{background:#B2CCFF;}
+#gold ul li:hover{background:#D9E5FF;}
+/*마우스 올렸을때 동작*/
+
+/*home.html*/
+#home{width:80%; margin:0 auto; position:relative; padding-top:10px;}
+#home .hometit{height:180px;}
+#home .hometit p{line-height:180px; color:black; font-weight:bold; font-size:200%; text-align:center;}
+#home .strphoto{width:28%; float:left; height:auto; margin:2%;}
+#home .explanation{display:inline-block; padding:0 10% 10% 10%;font-size:18px; text-align:30px;}
+#homemenu1{background:url(../images/home/hometit1.jpg) no-repeat center center; background-size:cover; }
+#homemenu2{background:url(../images/home/hometit2.jpg) no-repeat center center; background-size:cover; }
+#homemenu3{background:url(../images/home/hometit3.jpg) no-repeat center center; background-size:cover; }
+#home1{}
+
+/*상세메뉴 이교윤 소개*/
+#myProfile{width:600px;height:300px;
+			position:relative; 
+			padding:30px; margin:0 auto;
+			border-radius:30px;
+			background:pink;}
+#myProfile .myphoto{width:40%;
+					position:absolute;}
+#myProfile .myphoto img{width:100%; height:auto; }
+#myProfile .profileText{width:40%;
+						position:absolute;
+						left:50%;
+						line-height:36px; font-size:18px;}
+.photolist{background:white; position:relative; margin:0 auto; width:40%; min-width:200px; height:60px;  margin-bottom:20px; padding:20px;  overflow:hidden; }
+.photolist p, .sky{cursor:pointer; transition:.6s;}
+.photolist .skynum{ height:20px; position:absolute;top:0;left:50%;transform: translate(-50%);}
+.photolist .skynum p{font-size:11px; width:20px; height:100%; float:left;}
+.photolist .skynum p.on{font-weight:bold; color:red;}
+.photolist .sky {width:0;  position:absolute;height:45px; padding:10px 0; top:20px; left:0;}
+.sky.on{width:100%;}
+.sky li{ width:20%; overflow:hidden;height:100%; float:left;}
+.sky li img{width:25px; height:25px; display:block; margin:auto;}
+#photoView{width:40%; min-width:200px;height: 0; margin:0 auto; padding:2% 2% 8% 2% ; background:white; opacity:0;transition:.4s;}
+#photoView img{width:100%;}
+/*상세메뉴 졸업후(gong.html)*/
+.btbox{width:10%; z-index:300; opacity:0; height:100%; position:fixed; transition:.5s;}
+.btbox .bt{ width:100%; position:absolute; height:60%; top:8%; }
+.leftbt{background:url(../images/leftbt.jpg) no-repeat center center; background-size:64%;}
+#leftbox{left:0;}
+#leftbox:hover{opacity:1;}
+#rightbox{right:1%;}
+#rightbox:hover{opacity:1;}
+.rightbt{background:url(../images/rightbt.jpg) no-repeat center center; background-size:64%;}
+
+#text #my{ height:100%; max-width:800px; width:80%;  margin:0 auto; position:relative;}
+
+#my .mybox{width:0; position:absolute; overflow:hidden;}
+#my .mybox>h4{font-size:20px; margin:20px 0 10px 0;}
+#my .mybox.on{width:100%;}
+	/*공모전*/
+#my .mybox .gbox{width:100%; margin:40px 0;  height:540px; position:relative;}
+#my .mybox .gbox .gphoto{overflow:hidden; width:100%; height:100%; position:absolute;}
+#my .mybox .gbox.on .gphoto{width:46%;transition:1.6s;}
+#my .mybox .gbox.on .gphoto img{width:100%;}
+#my .mybox .gbox:nth-child(2n+1).on .gphoto img{left:-65%;}
+#my .mybox .gbox:nth-child(2n).on .gphoto img{right:-58%;}
+#my .mybox .gbox .gtext{width:0%; height:100%; position:absolute; overflow:hidden;}
+#my .mybox .gbox.on .gtext{width:50%;text-align:center;padding:10px;transition:3s;}
+#my .mybox .gbox .gtext span{display:none; position:absolute; left:10%;  font-size:25px; }
+#my .mybox .gbox .gtext p{position:absolute; margin:0;max-height:80%; overflow-y:auto; display:none;top: 50px;}
+#my .mybox .gbox:nth-child(2n+1) .gtext{left:100%;}
+#my .mybox .gbox:nth-child(2n+1).on .gtext{left:50%;}
+#my .mybox .gbox:nth-child(2n) .gphoto{right:0;}
+#my .mybox .gbox:nth-child(2n) .gtext{right:10%;left:0;}
+#my .mybox .gbox:nth-child(2n).on .gtext{right:0;left:0;}
+#my .mybox .gbox:nth-child(2n) .gtext p{margin:8px 34px 0 0;}
+
+	/*이모티콘*/
+#emo{width:80%; height:100%; margin:0 auto; background:white;}
+#emo .emotext{position:relative;margin-bottom:80px;}
+#emo .emotext p{padding:20px 30px;}
+#emo .emotext .emoQ > span{line-height:50px; display:block; font-size:22px; font-weight:bold;}
+#emo .emotext:nth-child(1) > .emoQ{margin-left:50px;}
+#emo .emotext:nth-child(1) > .emoQ:before{content:""; width:50px; height:50px; background:url("../images/gong/q.jpg") no-repeat center center; background-size:70%; position:absolute; left:20px;}
+#emo .emotext:nth-child(2) p{margin-left:120px; }
+#emo .emotext:nth-child(2):before{content:""; width:120px;height:120px; background:url("../images/gong/생각.jpg") no-repeat center; background-size:100%; position:absolute; left:20px; top:30px;}
+#emo .emotext:nth-child(2):hover:before{background:url("../images/gong/11생각.gif") no-repeat center;background-size:100%;}
+#emo .emotext:nth-child(3){padding-top:300px;}
+#emo .emotext:nth-child(3):before{content:""; background:url("../images/gong/emopoint.jpg") no-repeat center; background-size:80%;height:300px; width:100%;position:absolute; left:0; top:0;}
+#emo .emotext:nth-child(4){padding:70px 0 70px 0;}
+#emo .emotext:nth-child(4):before{content:""; width:100%; height:70px; background:url("../images/gong/emocut.jpg") no-repeat center; background-size:100%;position:absolute; left:0; top:0;}
+#emo .emotext:nth-child(4):after{content:""; width:100%; height:70px; background:url("../images/gong/emofullcut.jpg") no-repeat center; background-size:100%;position:absolute; left:0; top:180px;}
+#emo .emotext:nth-child(5) span{margin:20px 0 470px 0;}
+#emo .emotext:nth-child(5):before{content:""; width:100%; height:500px; background:url("../images/gong/emoapply.jpg") no-repeat center; background-size:100%;position:absolute; left:0; top:60px;}
+
+	/*애견미용*/
+#bu{width:100%;}
+#bu ul li .butit{display:block; font-size:15px; line-height:50px; color:black; padding:0 0 0 8%; width:100%; height:50px; background:url(../images/down.jpg) no-repeat center right 5%; background-color:gray;}
+#bu ul li.on .butit{border-bottom:1.5px solid; background:url(../images/up.jpg) no-repeat center right 5%; background-color:gray;}
+#bu ul li .butext{display:block; transition:.6s; width:100%; background:white; padding:0 15px 0 15px; height:0; overflow:hidden;}
+#bu ul li.on .butext{height:auto; transition:.6s;}
+/*상세메뉴 이력서(resume.html)*/
+
+/*상세메뉴 반려동물*/
+
+.profile{transition:.5s; width:100%; padding:20px 0 0 5% ; margin:0 auto;}
+.profile p{width:26%; background:white; padding-top:27px;float:left;}
+.profile p img{width:100%;}
+.profile ul{width:60%;min-width:240px; margin-left:5%; height:100%; font-size:20px;float:left; line-height:60px;}
+.profile ul li{width:100%; height:60px; background:pink; margin:5px 0; padding-left:10px;}
+.profile ul span{font-weight:bold; margin-right:7px;}
+.profile.on{height:0; overflow:hidden; top:0;}
+#albumicon{width:100px; height:100px; position:absolute; background:url('../images/album.jpg') no-repeat center center; bottom:0; left:45%; color:red; font-size:0;}
+#albumicon:hover{font-size:20px; text-align:center; cursor:pointer;}
+#album{width:auto; max-width:804px; min-width:152px; position:relative; left:50%; transform:translate(-50%); padding:7px; height:auto; margin:10px 0; transition:.8s; background:white;}
+#album .photo{width:22.8%; min-width:120px; margin:8.5px;height:22.8%;min-height:120px; display:inline-block;}
+#album .photo img{width:100%;height:auto;}
+#album .photo img:hover{opacity: 0.7; cursor:pointer;}
+@keyframes leftBt {
+  from {left:-100%;} 
+  to {left:0;}
+}
+@keyframes rightBt {
+  from {right:-100%;} 
+  to {right:0;}
+}
+#album .photo img,#inphoto img{animation-duration: 0.6s;}
+#down{width:150px;font-size:0; margin-top:20px; height:25px; background:url(../images/down.jpg)no-repeat center center;background-size:50px; margin-left:42%;}
+#down:hover{cursor:pointer; text-align:right; font-size:20px; color:white;}
+#inphoto{width:100%; height:100%; position:fixed;top:0px;  left:0; z-index:990; background:rgba(0,0,0,0.9); overflow:hidden;}
+#showbt1{content:""; width:100px; height:200px; background:url('../images/leftbt.jpg')no-repeat center center;  background-size:100px; position:absolute; left:150px; top:50%;}
+#inphoto img{width:80%; max-width:700px; height:auto; display:block; position:absolute; left:0; right:0; top:0; bottom:0; margin:auto;}
+#inphoto .show1{position:absolute; right:80%; top:32%; width:30%; height:45%; }
+#inphoto .show1.leftbt{background-size:25%;}
+#inphoto .show2{position:absolute; left:80%; top:38%; width:30%; height:45%;}
+#inphoto .show2.rightbt{background-size:25%;}
+/*공동*/
+.close{width:40px; height:40px; position:absolute;right:30px; top:20px; background:url('../images/close.jpg') no-repeat;background-size:40px;}
+.font5{font-size:50px;}
+.pink{background:pink;}
+.right{right:0;}
+@media (max-width: 600px){
+	#wrap header{height:52px;}
+	.section_css{padding-top:52px;}
+	#tit{width:20%; height:50px; top:7px; left:26px; position:relative;}
+	#tit .titicon{width:230px; height:100%; position:absolute; transition:.8s;}
+	#tit .titicon:nth-child(1){left:-10px;}
+	#tit .titicon:nth-child(2){left:-2px; top:0;}
+	#tit .titicon:nth-child(3){left:-11px; top:5px;}
+	#tit .titicon:nth-child(4){left:12px;top:-2px;}
+	#tit .titicon:nth-child(5){left:2px;top:7px;}
+	#tit .titicon:nth-child(6){left:23px;top:-2px;}
+	#tit .titicon:nth-child(7){left:48px;top:-5px;}
+	#tit .titicon:nth-child(n){ background-size:60%; background-position:left top;}
+	#tit:hover .titicon{left:0;top:0; cursor:pointer;}
+	#wrap.on #menuzip{display:block;}
+	#wrap.on #text{padding-top:100px;}
+	#menuzip{width:40px; cursor:pointer; display:none; transition:.2s; height:50px; background:url(../images/menu_zip_gray.jpg) no-repeat center center; background-size:30px; position:absolute; left:0; top:0; }
+	#menuzip.on{background:url(../images/close_border_gray.jpg) no-repeat center center; background-size:30px; position:absolute;}
+	#container{height:100%; width:100%;  position:relative; margin:0 auto;}
+	#container .content{height:200px;margin-top:10px; left:0; width:100%; position:absolute;}
+	#container .content h2{font-size:0;}
+	#conhomepage{top:0%;}
+	#conmy_introduction{top:200px;}
+	#congold{top:400px;}
+	#container .content .menutit{width:80%; height:150px; position:relative; margin:4.5% 10%; overflow:hidden;  text-align:center; transition:.6s;}
+	#container .content .menutit:hover{transition:.6s;}
+	#container .content .menutit p{width:100%; height:100%;min-height:150px;line-height:150px; z-index:11; position:absolute; margin:0 auto; font-size:25px; transition:.5s;}
+	#container .content .menutit ul{display:none; border-radius:0; top:0; left:10%; margin:0;  opacity:1; overflow:hidden; position:absolute; transition:.3s;}
+	#container .content .menutit ul li{display:block;padding-left:50px; width:0; height:50px; line-height:50px; }
+	#container .content .menutit ul li:hover{cursor:pointer; transition:.5s;}
+	#container .content .menutit ul li:last-child{border-radius:0;}
+	/*메인 화면 메뉴 마우스 오버 효과*/
+	#container .content .menutit.on{width:100%; height:100%; margin:4.5% 10%;}
+	#container .content .menutit.on p{width:20%;border:0;word-break:break-all;word-break:break-word;padding:21px; line-height:36px; font-size:17px; border-right:3px solid; transition:.3s; border-radius: 30px 0 0 30px;}
+	#container .content .menutit.on ul{display:block;}
+	#container .content .menutit.on ul li{width:69%;}
+	/*메뉴가 네비 바 될 때 css*/
+	#container.on{display:none;}
+	#container.nav{width:100%;overflow:scroll; height:100%; z-index:500;  position:relative; margin:0 auto;}
+	#container.nav #conhomepage{top:0%;}
+	#container.nav #conmy_introduction{top:180px;}
+	#container.nav #congold{top:360px;}
+	#container.nav .content .menutit{width:100%; height:100%; position:relative; margin:0; overflow:hidden;  text-align:center;}
+	#container.nav .content .menutit p{width:100%; height:38px;min-height:38px; padding:0; z-index:11; position:absolute; line-height:28px;font-size:25px;}
+	#container.nav .content .menutit ul{width:100%; display:block; left:0; border-radius:0 0 30px 30px; height:auto; top:0px;  opacity:1; margin-top:38px; overflow:hidden; position:absolute;}
+	#container.nav .content .menutit ul li{width:100%; height:35px; padding:5px 0; margin:6px 0; line-height:24px; }
+	#container.nav .content .menutit.on{width:100%; height:100%;margin:0; line-height:70px;}
+	#container.nav .content .menutit.on p{height:30px;  line-height:24px; border:0; border-radius:0;}
+	#container.nav .content .menutit.on ul{width:100%; top:0; height:auto; opacity:1;}
+	/*resume.html*/
+	#myProfile{min-width:200px; width:80%;
+			position:relative; 
+			padding:30px; margin:0 auto;
+			border-radius:30px;
+			background:pink;
+			overflow:hidden;}
+	#myProfile .myphoto{width:100%; left:0;}
+	#myProfile .profileText{width:100%;
+							left:0;top:70%;
+							line-height:30px; font-size:12px;}
+
+	.photolist{width:80%;}
+	#photoView{width:80%;}
+	/*gong.html*/
+
+	#my .mybox .gbox{width:100%; margin:20px 0; font-size:124%;  height:540px; position:relative;}
+	#my .mybox .gbox .gphoto{overflow:hidden; width:100%; height:100%; position:absolute;}
+	#my .mybox .gbox.on .gphoto{width:100%; height:40%; transition:1.6s;}
+	#my .mybox .gbox .gphoto img{width:100%; height:auto; position:absolute;
+	    top:-10%;}
+	#my .mybox .gbox.on .gphoto img{ height:auto; width:100%;}	
+	#my .mybox .gbox .gtext{width:0%; height:100%; position:absolute; overflow:hidden;}
+	#my .mybox .gbox.on .gtext{width:100%; height:60%; top:40%; text-align:center;padding:10px;transition:3s;}
+	#my .mybox .gbox .gtext span{display:none; position:absolute; left:10%;  font-size:25px; }
+	#my .mybox .gbox .gtext p{position:absolute; margin:8px 0 0 34px;max-height:80%; overflow-y:auto;top: 50px; left:10%; display:none;}
+	#my .mybox .gbox:nth-child(2n+1).on .gphoto img{left:0;}
+	#my .mybox .gbox:nth-child(2n).on .gphoto img{right:0;}
+	#my .mybox .gbox:nth-child(2n+1) .gtext{left:0%;}
+	#my .mybox .gbox:nth-child(2n+1).on .gtext{left:0%;}
+
+
+	#my .mybox .gbox:nth-child(2n) .gphoto{right:0;}
+	#my .mybox .gbox:nth-child(2n) .gtext{right:0;left:0;}
+	#my .mybox .gbox:nth-child(2n).on .gtext{right:0;left:0;}
+	#my .mybox .gbox:nth-child(2n) .gtext p{margin:0;}
+
+	#emo .emotext{margin-bottom:30px;}
+	#emo .emotext .emoQ span{font-size:18px;}
+	#emo .emotext:nth-child(1) > .emoQ{margin-left:25px;}
+	#emo .emotext:nth-child(1) > .emoQ:before{left:8px;}
+	#emo .emotext:nth-child(2) p{margin-left:100px;}
+	#emo .emotext:nth-child(2):before{left:2px;}
+	#emo .emotext:nth-child(5):before{background:url("../images/gong/emoapply2.jpg") no-repeat center; background-size:80%;}
+}
+ 
