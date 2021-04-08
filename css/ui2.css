@@ -100,9 +100,9 @@ html,body{overflow:hidden;height:100%;}
 #home .hometit p{line-height:180px; color:black; font-weight:bold; font-size:200%; text-align:center;}
 #home .strphoto{width:28%; float:left; height:auto; margin:2%;}
 #home .explanation{display:inline-block; padding:0 10% 10% 10%;font-size:18px; text-align:30px;}
-#homemenu1{background:url(../images/home/hometit1.jpg) no-repeat center center; background-size:cover; }
-#homemenu2{background:url(../images/home/hometit2.jpg) no-repeat center center; background-size:cover; }
-#homemenu3{background:url(../images/home/hometit3.jpg) no-repeat center center; background-size:cover; }
+#homemenu1{background:url(../images/home/hometit1.JPG) no-repeat center center; background-size:cover; }
+#homemenu2{background:url(../images/home/hometit2.JPG) no-repeat center center; background-size:cover; }
+#homemenu3{background:url(../images/home/hometit3.JPG) no-repeat center center; background-size:cover; }
 #home1{}
 
 /*상세메뉴 이교윤 소개*/
