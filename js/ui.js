@@ -61,9 +61,7 @@ $(document).ready(function(){
 			$("#text").html();
 			$("#text").load( liurl, function() {
 			  alert( "확인" );
-			});
-</scrip
-			
+			});			
 		}		
 	});
 });
