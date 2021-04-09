@@ -59,9 +59,9 @@ $(document).ready(function(){
 			$('#text').css({'display': 'block' });
 			$('#menu1_section').css({'display': 'none' });
 			$("#text").html();
-			$("#text").load( liurl, function() {
-			  alert( "확인" );
-			});			
+			$("#text").load(liurl, function() {
+			  alert( "Load was performed." );
+			});
 		}		
 	});
 });
