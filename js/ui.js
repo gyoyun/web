@@ -44,7 +44,7 @@ $(document).ready(function(){
 	});
 	$('.menutit ul li').click(function(){
 		check_index = $(".menutit").index($(this).closest('div'));
-		$("#wrap").css({"background":action_bg[check_index]});
+		$("body").css({"background":action_bg[check_index]});
 		$('#container').addClass('nav');
 		$('#container').addClass('on');
 		$('#menuzip').removeClass('on');
