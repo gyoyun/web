@@ -52,7 +52,6 @@ html,body{overflow:hidden;height:100%;}
 
 		/*본문*/
 .section_css{display:none;top:0; width:100%; position:absolute;  height:100%; padding-top:150px; overflow:scroll; transition:1.2s;}
-#text{padding-top:150px;}
 
 #menu1_section>a{position:absolute; top:0;}
 #container{width:100%; overflow:scroll; height:100%; position:relative; margin:0 auto;}
