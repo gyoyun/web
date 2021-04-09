@@ -29,13 +29,13 @@
 		var q=1;
 		var pcount=psize/5;
 		var $sky;
-		var photoPathF='./images/sky/sky (';
-		var photoPathL=').jpg';
+
 		for(i=1; i<=pcount; i++){
 			$(".photolist").append('<ul class="sky"></ul>');
 			$(".skynum").append('<p>'+ i +'</p>');
 			for(j=q; j<=5*i; j++){
-				$sky = $('<li><img src="'+photoPathF + j+ photoPathL+'"></li>');
+				for(j=q; j<=5*i; j++){
+				$sky = $('<li><img src="./images/sky/sky (' + j+ ').jpg"></li>');
 				$('.photolist ul').eq(i-1).append($sky);
 			}
 			z= z+5;
