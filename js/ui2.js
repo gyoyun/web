@@ -60,7 +60,7 @@ $(document).ready(function(){
 			$('#menu1_section').css({'display': 'none' });
 			$("#text").html();
 			$.ajax({
-				type : 'post',
+				type : 'get',
 				url : liurl,
 				dataType : 'html',
 				success : function(data){
