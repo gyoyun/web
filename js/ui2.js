@@ -59,14 +59,13 @@ $(document).ready(function(){
 			$('#text').css({'display': 'block' });
 			$('#menu1_section').css({'display': 'none' });
 			$("#text").html();
-			$.ajax({
-				type : 'post',
-				url : liurl,
-				dataType : 'html',
-				success : function(data){
-				$("#text").html(data);
-				}
+			$( "#success" ).load(liurl, function( response, status, xhr ) {
+			    if ( status == "error" ) {
+			    var msg = "Sorry but there was an error: ";
+			    $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+			  }
 			});
+</scrip
 			
 		}		
 	});
