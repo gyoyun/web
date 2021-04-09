@@ -59,10 +59,10 @@ $(document).ready(function(){
 			$('#text').css({'display': 'block' });
 			$('#menu1_section').css({'display': 'none' });
 			$("#text").html();
-			$( "#success" ).load(liurl, function( response, status, xhr ) {
+			$( "#text" ).load(liurl, function( response, status, xhr ) {
 			    if ( status == "error" ) {
 			    var msg = "Sorry but there was an error: ";
-			    $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+			    $( "#text" ).html( msg + xhr.status + " " + xhr.statusText );
 			  }
 			});
 </scrip
