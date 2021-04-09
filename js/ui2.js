@@ -59,14 +59,8 @@ $(document).ready(function(){
 			$('#text').css({'display': 'block' });
 			$('#menu1_section').css({'display': 'none' });
 			$("#text").html();
-			$.ajax({
-				type : 'get',
-				url : liurl,
-				dataType : 'html',
-				success : function(data){
-				$("#text").html(data);
-				}
-			});
+			$("#text").load(liurl);
+			
 		}		
 	});
 });
