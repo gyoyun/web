@@ -1,29 +1,36 @@
 
 	<div class="profile">
-		<p><img src="./images/danzi02.jpg"></p>
-		<ul>
-			<li><span>이 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 름 : </span>단지</li>
-			<li><span>생년월일 : </span>2017.04.11</li>
-			<li><span>성 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 별 : </span>여</li>
-			<li><span> s &nbsp&nbsp n &nbsp&nbsp s : </span>@danzi_4.11</li>
-		</ul>
-	</div>
-	<div id="albumicon"> click!!</div>
-	<div id="inphoto">
-		<button class="close"></button>
-		<button class="show1 leftbt"></button>
-		<button class="show2 rightbt"></button>
+			<img src="./images/danzi/danzi_profile.jpg" class="main_pho">
+			<div class="p_text">
+				<p>안녕하세요? </p>
+				<p>제 이름은 <span>단지</span>예요.</p>
+				<p>저는 <span>2017년 4월 11일</span>에 태어났답니다.</p>
+				<p>아래의 아이콘을 눌러 더 많은 사진을 구경하세요!</p>
+				<a href="https://www.instagram.com/danzi_4.11/" target="_blank"><img src="./images/insta_icon_gray.png">sns 구경 가기</a>
+				
+			</div>
+		</div>
+		<div id="albumicon"> click!!</div>
+		<div id="inphoto">
+			<button class="close"></button>
+			<button class="show1 leftbt"></button>
+			<button class="show2 rightbt"></button>
 		<div></div>
 	</div>
-	<div id="down">닫 기</div>
+	<div id="down"></div>
 	<div id="album">
-
 	</div>
 <script type="text/javascript">
+	<script>
 	$(document).ready(function(){
 		$('#inphoto').hide();
 		$('#album').hide();
 		$('#down').hide();
+		/*프로필 사진 크기*/
+		myProH();
+		$(window).resize(function(){
+				myProH();
+ 		});
 		/*사진 넣기*/
 		for(var i=1; i<=12; i++){
 			var $danzi  = $('<div class="photo"><img src="./images/danzi/danzi ('+i+').jpg"value='+i+'></div>');
@@ -31,10 +38,11 @@
 		}
 		/*사진박스*/
 		$('#albumicon').click(function(){
-			$('.profile').addClass("on");
-			$('#album').show();
+			$('.profile').fadeOut();
+			$('#album').fadeIn(3000);
 			$('#albumicon').hide();
 			$('#down').show(1200);
+			myProH();
 		});
 		var count;
 		var photosize= $(".photo").children().length;
@@ -70,10 +78,11 @@
 			$('#inphoto img').css({'animation-name': 'rightBt'});
 		});
 		$('#down').click(function(){
-			$('.profile').removeClass("on");
+			$('.profile').fadeIn('slow');;
 			$('#album').hide();
 			$('#albumicon').show(500);
 			$('#down').hide();
+			myProH();
 		});
 		/*사진박스 닫기*/
 		$('.close').click(function(){
@@ -82,4 +91,18 @@
 			$('#text').css({'overflow':'scroll'});
 		});
 	});
+
+	function myProH(){
+		if($(window).width()<=800){
+			$('.main_pho').css({'width' : '100%'});
+			$('.profile').css({ 'height': $('.main_pho').width()+260, 'font-size':14});
+			$('#album').css({'height':$('.photo').width()*6});
+		}
+		else{
+			$('.main_pho').css({'width' : '40%'});
+			$('.profile').css({ 'height': $('.main_pho').width(), 'font-size':$('.main_pho').width()/20});
+			$('#album').css({'height':$('.photo').width()*3});
+		}
+	}
+</script>
 </script>
