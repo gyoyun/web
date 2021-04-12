@@ -362,8 +362,8 @@ html,body{overflow:hidden;height:100%;}
 	#emo .emotext:nth-child(2) p{margin-left:100px;}
 	#emo .emotext:nth-child(2):before{left:2px;}
 	#emo .emotext:nth-child(5):before{background:url("../images/gong/emoapply2.jpg") no-repeat center; background-size:80%;}
-	.profile{ width:100%;}
-	#album{width:100%;min-width:200px;}
+
+	#album{width:80%;min-width:200px;}
 	#album .photo{width:50%;}
 }
  
