@@ -198,13 +198,11 @@ html,body{overflow:hidden;height:100%;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0d2ea', endColorstr='#d91919',GradientType=0 ); /* IE6-9 */}
 .profile .main_pho,.profile .p_text{float:left;}
 .profile .main_pho{width:80%; min-width:220px; margin-right:15px;}
-.profile .p_text{  padding:2%; color:rgb(72,67,65);
-					 
-						}
+.profile .p_text{ padding:2%; color:rgb(72,67,65);}
 .profile .p_text a{font-size:0;}
 .profile .p_text a:hover{font-size:14px;}
 .profile .p_text img{width:30px;height:auto; }
-.profile .p_text p{background:rgba(255,255,255,0.2);margin-top:2px; magin-bottom:2px; font-weight:bold; line-height: 2;}
+.profile .p_text p{background:rgba(255,255,255,0.2);margin:4px; font-weight:bold; line-height: 2;}
 		/*앨범*/
 #albumicon{width:100px; height:100px; position:absolute; background:url('../images/album.jpg') no-repeat center center; left:50%; transform:translate(-50%); color:red; font-size:0;}
 #albumicon:hover{font-size:20px; text-align:center; cursor:pointer;}
