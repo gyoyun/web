@@ -188,38 +188,47 @@ html,body{overflow:hidden;height:100%;}
 /*상세메뉴 이력서(resume.html)*/
 
 /*상세메뉴 반려동물*/
-
-.profile{transition:.5s; width:100%; padding:20px 0 0 5% ; margin:0 auto;}
-.profile p{width:26%; background:white; padding-top:27px;float:left;}
-.profile p img{width:100%;}
-.profile ul{width:60%;min-width:240px; margin-left:5%; height:100%; font-size:20px;float:left; line-height:60px;}
-.profile ul li{width:100%; height:60px; background:pink; margin:5px 0; padding-left:10px;}
-.profile ul span{font-weight:bold; margin-right:7px;}
-.profile.on{height:0; overflow:hidden; top:0;}
-#albumicon{width:100px; height:100px; position:absolute; background:url('../images/album.jpg') no-repeat center center; bottom:0; left:45%; color:red; font-size:0;}
+/*단지 프로필*/
+.profile{ width:80%; margin:0 auto; min-width:220px;
+	background: rgb(192,210,234); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(192,210,234,1) 10%, rgba(156,171,45,1) 40%, rgba(217,25,25,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(192,210,234,1) 10%,rgba(156,171,45,1) 40%,rgba(217,25,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(192,210,234,1) 10%,rgba(156,171,45,1) 40%,rgba(217,25,25,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0d2ea', endColorstr='#d91919',GradientType=0 ); /* IE6-9 */}
+.profile .main_pho,.profile .p_text{float:left;}
+.profile .main_pho{width:80%; min-width:220px; margin-right:15px;}
+.profile .p_text{  padding:2%; color:rgb(72,67,65);
+.profile .p_text a{font-size:0;}
+.profile .p_text a:hover{font-size:14px;}
+.profile .p_text img{width:30px;height:auto; }
+.profile .p_text p{background:rgba(255,255,255,0.2); font-weight:bold; line-height: 2;}
+		/*앨범*/
+#albumicon{width:100px; height:100px; position:absolute; background:url('./images/album.jpg') no-repeat center center; left:50%; transform:translate(-50%); color:red; font-size:0;}
 #albumicon:hover{font-size:20px; text-align:center; cursor:pointer;}
-#album{width:auto; max-width:804px; min-width:152px; position:relative; left:50%; transform:translate(-50%); padding:7px; height:auto; margin:10px 0; transition:.8s; background:white;}
-#album .photo{width:22.8%; min-width:120px; margin:8.5px;height:22.8%;min-height:120px; display:inline-block;}
-#album .photo img{width:100%;height:auto;}
+#down{font-size:0; margin-top:15px; margin-bottom:15px;  position:relative; height:30px; background:url(./images/down.jpg)no-repeat center center;background-size:50px; left:50%; transform:translate(-50%);}
+#down:hover{cursor:pointer;}
+#album{text-align:center; width:80%; margin:0 auto;}
+#album .photo{ background:rgb(255,255,255);width:25%; float:left; padding-top:16px; padding-bottom:13px;}
+#album .photo img{width:80%; height:auto;}
 #album .photo img:hover{opacity: 0.7; cursor:pointer;}
-@keyframes leftBt {
-  from {left:-100%;} 
-  to {left:0;}
-}
-@keyframes rightBt {
-  from {right:-100%;} 
-  to {right:0;}
-}
-#album .photo img,#inphoto img{animation-duration: 0.6s;}
-#down{width:150px;font-size:0; margin-top:20px; height:25px; background:url(../images/down.jpg)no-repeat center center;background-size:50px; margin-left:42%;}
-#down:hover{cursor:pointer; text-align:right; font-size:20px; color:white;}
+
+		/*사진 확대시*/
 #inphoto{width:100%; height:100%; position:fixed;top:0px;  left:0; z-index:990; background:rgba(0,0,0,0.9); overflow:hidden;}
-#showbt1{content:""; width:100px; height:200px; background:url('../images/leftbt.jpg')no-repeat center center;  background-size:100px; position:absolute; left:150px; top:50%;}
 #inphoto img{width:80%; max-width:700px; height:auto; display:block; position:absolute; left:0; right:0; top:0; bottom:0; margin:auto;}
-#inphoto .show1{position:absolute; right:80%; top:32%; width:30%; height:45%; }
-#inphoto .show1.leftbt{background-size:25%;}
-#inphoto .show2{position:absolute; left:80%; top:38%; width:30%; height:45%;}
-#inphoto .show2.rightbt{background-size:25%;}
+#inphoto .show1{position:absolute; right:80%; top:50%; transform:translate(0,-50%); width:30%; height:45%; }
+#inphoto .show1.leftbt{ background:url(./images/leftbt.jpg) no-repeat center center;background-size:25%;}
+#inphoto .show2{position:absolute; left:80%; top:50%; transform:translate(0,-50%); width:30%; height:45%;}
+#inphoto .show2.rightbt{ background:url(./images/rightbt.jpg) no-repeat center center;background-size:25%;}
+	.close{width:40px; height:40px; position:absolute; right:30px; top:20px; background:url('./images/close.jpg') no-repeat;background-size:40px;}
+@keyframes leftBt {
+	  from {left:-100%;} 
+	  to {left:0;}
+	}
+@keyframes rightBt {
+	  from {right:-100%;} 
+	  to {right:0;}
+	}
+
 /*공동*/
 .close{width:40px; height:40px; position:absolute;right:30px; top:20px; background:url('../images/close.jpg') no-repeat;background-size:40px;}
 .font5{font-size:50px;}
@@ -318,5 +327,9 @@ html,body{overflow:hidden;height:100%;}
 	#emo .emotext:nth-child(2) p{margin-left:100px;}
 	#emo .emotext:nth-child(2):before{left:2px;}
 	#emo .emotext:nth-child(5):before{background:url("../images/gong/emoapply2.jpg") no-repeat center; background-size:80%;}
+	/*반려동물*/
+	.profile{ width:100%;}
+	#album{width:100%;min-width:200px;}
+	#album .photo{width:50%;}
 }
  
