@@ -239,13 +239,13 @@ html,body{overflow:hidden;height:100%;}
 	.section_css{padding-top:52px;}
 	#tit{width:230px; height:50px; top:3px; left:50%; transform:translate(-50%);}
 	#tit .titicon{width:230px; height:100%; position:absolute; transition:.8s;}
-	#tit:hover .titicon:nth-child(1){background:url(../images/title1_pk.png)no-repeat center;}
-	#tit:hover .titicon:nth-child(2){background:url(../images/title2_pk.png)no-repeat center;}
-	#tit:hover .titicon:nth-child(3){background:url(../images/title3_pk.png)no-repeat center;}
-	#tit:hover .titicon:nth-child(4){background:url(../images/title4_pk.png)no-repeat center;}
-	#tit:hover .titicon:nth-child(5){background:url(../images/title5_pk.png)no-repeat center;}
-	#tit:hover .titicon:nth-child(6){background:url(../images/title6_pk.png)no-repeat center;}
-	#tit:hover .titicon:nth-child(7){background:url(../images/title7_pk.png)no-repeat center;}
+	#tit:hover .titicon:nth-child(1){background:url(../images/title1_pk.jpg)no-repeat center;}
+	#tit:hover .titicon:nth-child(2){background:url(../images/title2_pk.jpg)no-repeat center;}
+	#tit:hover .titicon:nth-child(3){background:url(../images/title3_pk.jpg)no-repeat center;}
+	#tit:hover .titicon:nth-child(4){background:url(../images/title4_pk.jpg)no-repeat center;}
+	#tit:hover .titicon:nth-child(5){background:url(../images/title5_pk.jpg)no-repeat center;}
+	#tit:hover .titicon:nth-child(6){background:url(../images/title6_pk.jpg)no-repeat center;}
+	#tit:hover .titicon:nth-child(7){background:url(../images/title7_pk.jpg)no-repeat center;}
 	#tit .titicon:nth-child(n){left:0;top:0;background-position:left top;}
 	#tit:hover .titicon:nth-child(n){left:0;top:0;background-size:80%; background-position:left top;}
 	#wrap.on #menuzip{display:block;}
