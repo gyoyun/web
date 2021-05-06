@@ -16,7 +16,7 @@ $(document).ready(function(){
 		$('#homemenu'+liindex).tabIndex = -1;
 
 	});
-	
+
 	$('#menuzip').click(function(){
 		if(menucount==0){
 			$('#container').removeClass('on');
@@ -43,6 +43,7 @@ $(document).ready(function(){
 		$(lname).css({height:-100});
 	});
 	$('.menutit ul li').click(function(){
+		$('header').css({'height':'130px'});
 		check_index = $(".menutit").index($(this).closest('div'));
 		$("body").css({"background":action_bg[check_index]});
 		$('#container').addClass('nav');
@@ -59,7 +60,22 @@ $(document).ready(function(){
 			$('#text').css({'display': 'block' });
 			$('#menu1_section').css({'display': 'none' });
 			$("#text").html();
-			$( "#text" ).load(liurl);
+			$( "#text" ).load(liurl, function( response, status, xhr ) {
+				if ( status == "error" ) {
+					var msg = "Sorry but there was an error: ";
+					$( "#text" ).html( msg + xhr.status + " " + xhr.statusText );
+				}
+			});
+			/*$.ajax({
+				type : 'post', //HTTP 요청 방식
+				url : liurl, //해당 url
+				dataType : 'html', //data 타입
+				success : function(data) { //HTTP 요청 성공 후 데이터 전송
+					$("#text").html(data);
+				}
+			});*/
 		}		
 	});
+
+
 });
